@@ -30,9 +30,7 @@ public class Service {
 		System.out.println("4. Legal");
 		System.out.println("Please Select Department from list above");
 		int option = sc.nextInt();
-		
-		if(option == 1 || option == 2 || option == 3 || option ==4)
-		{
+	
 			switch(option)
 		{
 		   case 1 :
@@ -49,14 +47,15 @@ public class Service {
 			   department = "Legal" ;
 			   break;
 		   default : 
-			   System.out.println("You've Entered department as:"+department);
+			   department = "Invalid";
 			   break;
 		}
-			
-		}
-		return department;
+			return department;	
 		
-	}
+		}
+		
+		
+	
 	public void showCredentials(Employee employee, String email, char[] generatePassword) {
 		System.out.println("Dear,"+ employee.getFirstName() +" Welcome to the GreatLearning! here are your Credentials :");
 		System.out.println("Email :"+ email);
